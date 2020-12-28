@@ -39,13 +39,15 @@ Nifi, as a Dataflow systems, can schedule the flow of data between software syst
 
 ## Docker
 
-*ajouter le logo de Docker en image sur le read.me*   
+*ajouter le logo de Docker en image sur le read.me*     
+
 Docker is a open source software that gives the possibility to launch applications and software using images and containers. Images are version of applications and softwares. One can find a lot of existing images in the Docker Hub (open library for container images from applications, software and open source projects). When you launch an image, you create a container. Each containers uses an operating system and has a part of memory allowed. Docker has specifics features which can let containers use volume in the host machine, and others features useful (improving security...). Docker is used to deploy software rapidly. 
 
 ## Kafka 
 
 *ajouter le logo de Kafka en image sur le read.me*   
-*à développer en fonction de vos recherches*  
+*à développer en fonction de vos recherches*    
+
 Kafka is a open source distributed streaming platform, used since 2012. It uses messaging agents and it is written in Scala. Kafka can be used as an messaging, streaming, dataflow of data system in real time. 
 
 # Uses cases
@@ -110,8 +112,8 @@ It will be explained (with steps to implement and a list of problems encountered
 - Documentation for Kafka
 - Basic Documentation for Syslog
 - Some tutoriels designed by the community : 
-..- 
-..-
-..-
-..- 
+..- Ingestion of CV with Nifi and ELK : 
+..- Ingestion of tweets with Nifi and ELK : 
+..- Ingestion of CSV with Nifi and ELK : 
+..- Monitoring Log with Kakfa and ELK : 
 

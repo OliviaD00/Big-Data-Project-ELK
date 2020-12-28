@@ -112,8 +112,8 @@ It will be explained (with steps to implement and a list of problems encountered
 - Documentation for Kafka
 - Basic Documentation for Syslog
 - Some tutoriels designed by the community : 
-..- Ingestion of CV with Nifi and ELK : 
-..- Ingestion of tweets with Nifi and ELK : 
-..- Ingestion of CSV with Nifi and ELK : 
-..- Monitoring Log with Kakfa and ELK : 
+.- Ingestion of CV with Nifi and ELK : 
+.- Ingestion of tweets with Nifi and ELK : 
+.- Ingestion of CSV with Nifi and ELK : 
+.- Monitoring Log with Kakfa and ELK : 
 

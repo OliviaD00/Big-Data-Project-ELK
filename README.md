@@ -1,13 +1,17 @@
+
 # Big-Data-Project-ELK
 This a Project for the ING5 Class of Big Data at ECE Paris;  
-Members of the group : Alexis DIREZ, Neil SEGARD, Olivia DALMASSO  
+Members of the group : 
+- Alexis DIREZ
+- Neil SEGARD
+- Olivia DALMASSO  
 
 The project has to focus on Open Source distributed systems. For doing that we choose ElasticSearch (a plateform distributed systems).   
 
 # Progress of the project
 We test several uses cases and technologies with Elasticsearch.   
 The goal was to implement Elasticsearch with two others Open Source distributed systems : Nifi (Dataflow system) and Kafka.   
-We present our technical results in the several branches of this project. But the architecture/design is presented here in the main.   
+We present our technical results in the several subfolders of this project. But the architecture/design is presented here in this readme.   
 
 # All technologies involved in our project and its uses cases
 
@@ -112,10 +116,10 @@ Even if Power BI can be very useful with CSV files and make quickly some transfo
 
 ### Implementation of Code (Technical projects)
 
-It will be explained in each branch (with steps to implement it and a list of problems encountered) : 
-- Branch Ingestion of CV's Data
-- Branch Ingestion of Tweets in the field of Big Data
-- Branch Ingestion of CSV (People Profile)
+It will be explained in each subfolder (with steps to implement it and a list of problems encountered) : 
+- [Ingestion of CV's Data](https://github.com/OliviaD00/Big-Data-Project-ELK/tree/main/Ingestion_Nifi_CV_Data)
+- [Ingestion of Tweets in the field of Big Data](https://github.com/OliviaD00/Big-Data-Project-ELK/tree/main/Ingestion_Nifi_Tweet)
+- [Ingestion of CSV (People Profile)](https://github.com/OliviaD00/Big-Data-Project-ELK/tree/main/Ingestion_Nifi_CSV_Profile)
 
 ## Monitoring of logs with Kafka and Elasticsearch
 
@@ -150,7 +154,7 @@ The other dataflow considered was Nifi but we already tests it.
 
 ### Implementation of Code 
 
-It will be explained (with steps to implement and a list of problems encountered) in the branch Monitoring_Log_Kafka.
+It will be explained (with steps to implement and a list of problems encountered) in the subfolder [Monitoring_Log_Kafka](https://github.com/OliviaD00/Big-Data-Project-ELK/tree/main/Monitoring_Log_Kafka).
 
 ## Sources 
 
@@ -160,8 +164,8 @@ It will be explained (with steps to implement and a list of problems encountered
 - Documentation for Kafka : https://kafka.apache.org/documentation/
 - Basic Documentation for logs : https://documentation.online.net/fr/dedicated-server/hardware/log-files
 - Some tutoriels designed by the community : 
-1. Parsing of CV into JSON : https://github.com/antonydeepak/ResumeParser.git
-2. Ingestion of tweets with Nifi and ELK : https://vichargrave.github.io/programming/tweet-ingestion-with-nifi-and-elasticsearch/ ; https://medium.com/@jdayllon/simple-twitter-monitor-with-elasticsearch-opendistro-15cb52ef420a ; https://yourdataninjas.com/streaming-analytics-demos/
-3. Ingestion of CSV with Nifi and ELK : https://ericlondon.com/2018/03/04/using-nifi-to-convert-csv-to-json-and-store-in-elasticsearch.html ; 
-4. Monitoring Log with Kakfa and ELK : https://www.google.com/amp/s/logz.io/blog/deploying-kafka-with-elk/amp/
+	1. Parsing of CV into JSON : https://github.com/antonydeepak/ResumeParser.git
+	2. Ingestion of tweets with Nifi and ELK : https://vichargrave.github.io/programming/tweet-ingestion-with-nifi-and-elasticsearch/ ; https://medium.com/@jdayllon/simple-twitter-monitor-with-elasticsearch-opendistro-15cb52ef420a ; https://yourdataninjas.com/streaming-analytics-demos/
+	3. Ingestion of CSV with Nifi and ELK : https://ericlondon.com/2018/03/04/using-nifi-to-convert-csv-to-json-and-store-in-elasticsearch.html ; 
+	4. Monitoring Log with Kakfa and ELK : https://www.google.com/amp/s/logz.io/blog/deploying-kafka-with-elk/amp/
 

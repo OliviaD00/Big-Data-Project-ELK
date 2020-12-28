@@ -89,15 +89,15 @@ For this 3 mini - Big Data - project, we use :
 
 Others technologies considered : Kakfa for the Dataflow system, Kubernetes for deployment like Docker, Power BI for ETL and Datavisualisation. 
 
-1. Why Nifi and not Kafka ? 
+1. **Why Nifi and not Kafka ?** 
 
 For the knowledge of the tool. Members of our group has already use Nifi in intership and no one has already Kafka. But we will test it with the other part of our project. 
 
-2. Why Docker and not Kubernetes ?
+2. **Why Docker and not Kubernetes ?**
 
 The two are very useful to deploy projects and version of software. But we didn't need clusters and orchestrations of containers like Kubernetes provide. Docker has futhermore lighter and faster deployment of containers, which is useful for a POC. 
 
-3. Why Kibana and Nifi and not Power BI ? 
+3. **Why Kibana and Nifi and not Power BI ?** 
 
 Even if Power BI can be very useful with CSV files and make quickly some transformations of the data and very simple and powerful visualisation, we didn't choose it because : 
 - Our project is focused on the open source distributed platform Elasticsearch which uses Kibana as Dataviz tool

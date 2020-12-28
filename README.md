@@ -24,20 +24,20 @@ Elasticsearch is a distributed, open source search and analytics engine for all 
 
 ## Kibana
 
-![Logo Kibana](img/logo-kibana.png){:height="70px"}  
+<img src="img/logo-kibana.png" height="70">
 
 Kibana is the Datavisualisation tool of the ELK suite. It allows us to create some visualisations and Dashboard (quite useful for monitoring) with data loaded on Elasticsearch. Kibana gives us also the possibility to implement Machine Learning on the Datasets to try to make some previsions. 
 
 ## Logstash and beats
 
-![Logo Logstash](img/logo-logstach.png){:height="70px"} 
-![Logo Beats](img/logo-beats.png){:height="70px"}
+<img src="img/logo-logstach.png" height="70">
+<img src="img/logo-beats.png" height="70">
 
 Logstash can be assimilated as the ETL of the ELK suite. It collects, transforms and analyses logs. Beats are transfer agents which allow to centralize logs and files. It uses modules that provide models for ingestion and indexation of classic type of data. Beats can be used as ingest pre-process pipelines and can be used like Kafka. Beats can directly communicate with Elasticsearch or pass data into Logstach in order to continue the transformation of the data. 
 
 ## Nifi
  
-![Logo Nifi](img/logo-nifi.png)
+<img src="img/logo-nifi.png" height="70">
 
 Apache NiFi is a software project used to automate the flow of data between software systems (Dataflow system). It can also be used as an ETL Extract, transform and load data. It was developed by the NSA then open-sourced.   
 Nifi uses template, processors to describe relations between software systems. It offers some specific features which can help to provide security using TLS encryption, the ability to operate within clusters...   
@@ -45,13 +45,13 @@ Nifi, as a Dataflow system, can schedule the flow of data between software syste
 
 ## Docker
 
-![Logo Docker](img/logo-docker.png)
+<img src="img/logo-docker.png" height="70">
 
 Docker is an open source software, since 2013, that gives the possibility to launch applications and software using images and containers. Images are version of applications and softwares. One can find a lot of existing images in the Docker Hub (open library of container images from applications, software and open source projects). When you launch an image, you create a container. Each container uses an operating system and has a part of memory allowed. Docker has specific features which can let containers use volume on the host machine, and others features useful (improving security...). Docker is used to deploy software rapidly. 
 
 ## Kafka 
 
-![Logo Kafka](img/logo-kafka.png){:height="70px"}  
+<img src="img/logo-kafka.png" height="70">
 *à développer en fonction de vos recherches*    
 
 Kafka is an open source distributed streaming platform, used since 2012. It uses messaging agents and it is written in Scala. Kafka can be used as a messaging, streaming, dataflow of data systems in real time. 

@@ -18,20 +18,20 @@ We present our technical results in the several subfolders of this project. But 
 
 ## Elasticsearch
 
-![Logo Elasticsearch](img/logo-elasticsearch.png) 
+![Logo Elasticsearch](img/logo-elasticsearch.png){:height="70px"}
 
 Elasticsearch is a distributed, open source search and analytics engine for all types of data. It provides a distributed, multitenant-capable full-text search engine, it uses JSON documents to store Data. It allows some powerful queries with a system of scoring and a lot of possibilities of aggregation. It is developed in Java. It is often used with the ELK suite (Elasticsearch - Logstash - Kibana), allowed this distributed open source engine to complete extract-load-transform actions, aggregations and storage of documents and at the end monitoring and data visualization: a complete and flexible tool! 
 
 ## Kibana
 
-![Logo Kibana](img/logo-kibana.png)   
+![Logo Kibana](img/logo-kibana.png){:height="70px"}  
 
 Kibana is the Datavisualisation tool of the ELK suite. It allows us to create some visualisations and Dashboard (quite useful for monitoring) with data loaded on Elasticsearch. Kibana gives us also the possibility to implement Machine Learning on the Datasets to try to make some previsions. 
 
 ## Logstash and beats
 
-![Logo Logstash](img/logo-logstach.png)  
-![Logo Beats](img/logo-beats.png) 
+![Logo Logstash](img/logo-logstach.png){:height="70px"} 
+![Logo Beats](img/logo-beats.png){:height="70px"}
 
 Logstash can be assimilated as the ETL of the ELK suite. It collects, transforms and analyses logs. Beats are transfer agents which allow to centralize logs and files. It uses modules that provide models for ingestion and indexation of classic type of data. Beats can be used as ingest pre-process pipelines and can be used like Kafka. Beats can directly communicate with Elasticsearch or pass data into Logstach in order to continue the transformation of the data. 
 
@@ -51,7 +51,7 @@ Docker is an open source software, since 2013, that gives the possibility to lau
 
 ## Kafka 
 
-![Logo Kafka](img/logo-kafka.png)   
+![Logo Kafka](img/logo-kafka.png){:height="70px"}  
 *à développer en fonction de vos recherches*    
 
 Kafka is an open source distributed streaming platform, used since 2012. It uses messaging agents and it is written in Scala. Kafka can be used as a messaging, streaming, dataflow of data systems in real time. 

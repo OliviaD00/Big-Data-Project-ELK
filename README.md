@@ -18,7 +18,7 @@ We present our technical results in the several subfolders of this project. But 
 
 ## Elasticsearch
 
-![Logo Elasticsearch](img/logo-elasticsearch.png){:height="70px"}
+<img src="img/logo-elasticsearch.png" height="70">
 
 Elasticsearch is a distributed, open source search and analytics engine for all types of data. It provides a distributed, multitenant-capable full-text search engine, it uses JSON documents to store Data. It allows some powerful queries with a system of scoring and a lot of possibilities of aggregation. It is developed in Java. It is often used with the ELK suite (Elasticsearch - Logstash - Kibana), allowed this distributed open source engine to complete extract-load-transform actions, aggregations and storage of documents and at the end monitoring and data visualization: a complete and flexible tool! 
 

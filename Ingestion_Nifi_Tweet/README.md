@@ -291,12 +291,13 @@ PUT /tweets
 
 ## Get started 
 
-1. Make sure that Docker is running and runs two containers : once for the Apache Nifi image and once for ELK suite. If it is not : go back to Installation > Build an image of Nifi and the ELK suite. 
-2. Verify if Elasticsearch is running by checking at http://localhost:9200/  
+**1. Make sure that Docker is running and runs two containers : once for the Apache Nifi image and once for ELK suite. If it is not : go back to Installation > Build an image of Nifi and the ELK suite.**
+**2. Verify if Elasticsearch is running by checking at http://localhost:9200/  **
 
 *ajouter une image de localhost screen*  
 
-3. Put an index in Kibana. For that, you have to go to http://localhost:5601/app/dev_tools#/console. In Dev Tools, you have to put a new Index named "tweets" (see Configuration > Configure index on Elasticsearch via Kibana). Submit it and look if you get this message in response :  
+**3. Put an index in Kibana. For that, you have to go to http://localhost:5601/app/dev_tools#/console. In Dev Tools, you have to put a new Index named "tweets" (see Configuration > Configure index on Elasticsearch via Kibana).**    
+Submit it and look if you get this message in response :  
 ```
 {
   "acknowledged" : true,
@@ -305,8 +306,8 @@ PUT /tweets
 }
 ```
 *ajouter une image de Kibana index tweets*  
-4. Then open nifi : http://localhost:8080/nifi/
-5. Load the template tweet_nifi.xml in this subfolder.   
+**4. Then open nifi : http://localhost:8080/nifi/**  
+**5. Load the template tweet_nifi.xml in this subfolder.**    
 - For doing that, first upload the template in nifi (after downloaded it in this github)  
 
 *ajouter l'image upload template nifi*  
@@ -319,11 +320,11 @@ PUT /tweets
 
 *ajouter l'image select template nifi*
 
-6. Then you will have to configure the first processor named Ingest Tweets from Public Feed (GetTwitter Processor) by adding our Consumer Key & Secret and Token Access Key & Secret that you can find on your application in your Twitter Developer Account.   
+**6. Then you will have to configure the first processor named Ingest Tweets from Public Feed (GetTwitter Processor) by adding our Consumer Key & Secret and Token Access Key & Secret that you can find on your application in your Twitter Developer Account.** 
 
 *ajouter l'image gettwitter config*  
 
-7. Then you can start the Nifi pipeline by clicking on the button play.
+**7. Then you can start the Nifi pipeline by clicking on the button play.**  
 
 *ajouter l'image start the violence*  
 

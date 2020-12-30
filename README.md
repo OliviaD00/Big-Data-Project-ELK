@@ -71,24 +71,24 @@ Companies use cases: I want to load, extract, transform data with ingestion pipe
 
 An IT Consulting firm wants to analyse quickly the CV's of the market in the IT field. The problem is that there is a lot of choice in the market in different sources (indeed, monster, linkedIn)... Take a look at each CV will take a lot of time !   
  
-<img src="img/problematic ingestion cv_s data.png" height="70">
+<img src="img/problematic ingestion cv_s data.png">
 
 Our project will provide a quick way to see keywords on many CV's in one look. 
 
-<img src="img/use_case/ingestion cv data.png" height="70">  
+<img src="img/use_case/ingestion cv data.png">  
 
 In this project, we will implement a POC to show how we can analyze CV from a directory of a computer, even if the directory has a lot CV's files (Volume Big Data Problem) with Dashboard.   
 
 #### Ingestion of tweets in the field of Big Data
 
-<img src="img/use_case/ingestion tweets.png" height="70">  
+<img src="img/use_case/ingestion tweets.png">  
 
 An IT Consulting firm wants to make a technological watch in the field of Big Data by analyzing tweets about it.  
 In this project, we will implement a POC to show how we can analyze tweets (if Twitter authorize us). 
 
 #### Ingestion of CSV 
 
-<img src="img/use_case/ingestion csv data.png" height="70">   
+<img src="img/use_case/ingestion csv data.png">   
 
 A Marketing service of Company wants to analyze rapidly profile of their consumers and to store mail address on a search engine.   
 In this project, we will implement a POC to show how we can analyze data from a CSV file with a lot of lines (with only basic columns). 
@@ -122,15 +122,15 @@ Even if Power BI can be very useful with CSV files and make quickly some transfo
 
 #### Ingestion of CV's Data
 
-<img src="img/poc/ingestion cvs data.png" height="70">  
+<img src="img/poc/ingestion cv_s data.png">  
 
 #### Ingestion of tweets in the filed of Big Data
 
-<img src="img/poc/ingestion tweets.png" height="70">  
+<img src="img/poc/ingestion tweets.png">  
 
 #### Ingestion of CSV
 
-<img src="img/poc/ingestion csv profile.png" height="70">  
+<img src="img/poc/ingestion csv profile.png">  
 
 ### Implementation of Code (Technical projects)
 
@@ -143,7 +143,7 @@ It will be explained in each subfolder (with steps to implement it and a list of
 
 ### Description of the Use Case
 
-<img src="img/poc/monitoring logs.png" height="70">  
+<img src="img/poc/monitoring logs.png">  
 
 A company with very sensitive data - use case: A bank wants to monitor potential intrusions of its computer equipment.
 They want a dashboard to monitor logs of each computer of the company. A security engineer (like SOC) will have to monitore logs and find a way to analyze the behavior of potential threats.  
@@ -166,7 +166,7 @@ The other dataflow considered was Nifi but we have already tested it.
 
 ### Architecture of the project 
 
-<img src="img/poc/monitoring logs.png" height="70">  
+<img src="img/poc/monitoring logs.png">  
 
 ### Implementation of Code 
 

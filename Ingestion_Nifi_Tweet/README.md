@@ -326,7 +326,7 @@ Submit it and look if you get this message in response :
 
 **7. Then you can start the Nifi pipeline by clicking on the button play.**  
 
-*ajouter l'image start the violence*  
+*ajouter l'image start the pipeline*  
 
 # Problems encountered
 

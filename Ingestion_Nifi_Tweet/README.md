@@ -339,13 +339,13 @@ In this case, we need to run these two commands to give much space :
   
 ## Nifi and Twitter 
 
-### Stay blocked to the step "Drop Invalid Tweets" **not solved** 
+- Stay blocked to the step "Drop Invalid Tweets" **not solved** 
 
 In this case, we say blocked to the processor of Nifi that says "if there is no text in the tweets (= empty) don't forward it". So, it might be the keys of twitter account authentification (maybe they were not totally actives when we make the tests) that have a little problem.
 
 *photo pb Twitter flow (encore une fois)*
 
-### Time to have access
+- Time to have access
 
 Speaking about keys, we take **more than 10 days** to obtain our twitter developer accounts, which gives use the keys needed to connect and to use the processor "GetTwitter" of Nifi. Twitter needed more informations about our project. 
 

@@ -292,7 +292,8 @@ PUT /tweets
 ## Get started 
 
 **1. Make sure that Docker is running and runs two containers : once for the Apache Nifi image and once for ELK suite. If it is not : go back to Installation > Build an image of Nifi and the ELK suite.**
-**2. Verify if Elasticsearch is running by checking at http://localhost:9200/  **
+
+**2. Verify if Elasticsearch is running by checking at http://localhost:9200/**
 
 *ajouter une image de localhost screen*  
 
@@ -307,7 +308,8 @@ Submit it and look if you get this message in response :
 ```
 *ajouter une image de Kibana index tweets*    
 
-**4. Then open nifi : http://localhost:8080/nifi/**  
+**4. Then open nifi : http://localhost:8080/nifi/** 
+
 **5. Load the template tweet_nifi.xml in this subfolder.**    
 
 - For doing that, first upload the template in nifi (after downloaded it in this github)  

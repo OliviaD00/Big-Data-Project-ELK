@@ -305,9 +305,11 @@ Submit it and look if you get this message in response :
   "index" : "tweets"
 }
 ```
-*ajouter une image de Kibana index tweets*  
+*ajouter une image de Kibana index tweets*    
+
 **4. Then open nifi : http://localhost:8080/nifi/**  
 **5. Load the template tweet_nifi.xml in this subfolder.**    
+
 - For doing that, first upload the template in nifi (after downloaded it in this github)  
 
 *ajouter l'image upload template nifi*  

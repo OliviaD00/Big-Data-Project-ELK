@@ -1,5 +1,6 @@
 
 
+
 # Big-Data-Project-ELK
 This a Project for the ING5 Class of Big Data at ECE Paris;  
 Members of the group : 
@@ -18,26 +19,26 @@ We present our technical results in the several subfolders of this project. But 
 
 ## Elasticsearch
 
-<img src="img/logo-elasticsearch.png" height="70">
+<img src="img/logos/elasticsearch.png" height="70">
 
 Elasticsearch is a distributed, open source search and analytics engine for all types of data. It provides a distributed, multitenant-capable full-text search engine, it uses JSON documents to store Data. It allows some powerful queries with a system of scoring and a lot of possibilities of aggregation. It is developed in Java. It is often used with the ELK suite (Elasticsearch - Logstash - Kibana), allowed this distributed open source engine to complete extract-load-transform actions, aggregations and storage of documents and at the end monitoring and data visualization: a complete and flexible tool! 
 
 ## Kibana
 
-<img src="img/logo-kibana.png" height="70">
+<img src="img/logos/kibana.png" height="70">
 
 Kibana is the Datavisualisation tool of the ELK suite. It allows us to create some visualisations and Dashboard (quite useful for monitoring) with data loaded on Elasticsearch. Kibana gives us also the possibility to implement Machine Learning on the Datasets to try to make some previsions. 
 
 ## Logstash and beats
 
-<img src="img/logo-logstach.png" height="70">
-<img src="img/logo-beats.png" height="70">
+<img src="img/logos/logstach.png" height="70">
+<img src="img/logos/beats.png" height="70">
 
 Logstash can be assimilated as the ETL of the ELK suite. It collects, transforms and analyses logs. Beats are transfer agents which allow to centralize logs and files. It uses modules that provide models for ingestion and indexation of classic type of data. Beats can be used as ingest pre-process pipelines and can be used like Kafka. Beats can directly communicate with Elasticsearch or pass data into Logstach in order to continue the transformation of the data. 
 
 ## Nifi
  
-<img src="img/logo-nifi.png" height="70">
+<img src="img/logos/nifi.png" height="70">
 
 Apache NiFi is a software project used to automate the flow of data between software systems (Dataflow system). It can also be used as an ETL Extract, transform and load data. It was developed by the NSA then open-sourced.   
 Nifi uses template, processors to describe relations between software systems. It offers some specific features which can help to provide security using TLS encryption, the ability to operate within clusters...   
@@ -45,13 +46,13 @@ Nifi, as a Dataflow system, can schedule the flow of data between software syste
 
 ## Docker
 
-<img src="img/logo-docker.png" height="70">
+<img src="img/logos/docker.png" height="70">
 
 Docker is an open source software, since 2013, that gives the possibility to launch applications and software using images and containers. Images are version of applications and softwares. One can find a lot of existing images in the Docker Hub (open library of container images from applications, software and open source projects). When you launch an image, you create a container. Each container uses an operating system and has a part of memory allowed. Docker has specific features which can let containers use volume on the host machine, and others features useful (improving security...). Docker is used to deploy software rapidly. 
 
 ## Kafka 
 
-<img src="img/logo-kafka.png" height="70">
+<img src="img/logos/kafka.png" height="70">
 *à développer en fonction de vos recherches*    
 
 Kafka is an open source distributed streaming platform, used since 2012. It uses messaging agents and it is written in Scala. Kafka can be used as a messaging, streaming, dataflow of data systems in real time. 
@@ -67,25 +68,25 @@ Companies use cases: I want to load, extract, transform data with ingestion pipe
 #### Ingestion of CV's Data
 
 An IT Consulting firm wants to analyse quickly the CV's of the market in the IT field. The problem is that there is a lot of choice in the market in different sources (indeed, monster, linkedIn)... Take a look at each CV will take a lot of time !   
-
-*ajouter l'image problematic - ingestion of CV's Data*    
+ 
+<img src="img/problematic Ingestion CV_s Data.png" height="70">
 
 Our project will provide a quick way to see keywords on many CV's in one look. 
 
-*ajouter l'image use case - ingestion of CV's Data*  
+<img src="img/use case Ingestion CV data.png" height="70">  
 
 In this project, we will implement a POC to show how we can analyze CV from a directory of a computer, even if the directory has a lot CV's files (Volume Big Data Problem) with Dashboard.   
 
 #### Ingestion of tweets in the field of Big Data
 
-*ajouter l'image use case - ingestion Tweets*  
+<img src="img/use case Ingestion Tweets.png" height="70">  
 
 An IT Consulting firm wants to make a technological watch in the field of Big Data by analyzing tweets about it.  
 In this project, we will implement a POC to show how we can analyze tweets (if Twitter authorize us). 
 
 #### Ingestion of CSV 
 
-*ajouter l'image use case - ingestion of CSV Profile*  
+<img src="img/use case Ingestion CSV data.png" height="70">   
 
 A Marketing service of Company wants to analyze rapidly profile of their consumers and to store mail address on a search engine.   
 In this project, we will implement a POC to show how we can analyze data from a CSV file with a lot of lines (with only basic columns). 
@@ -119,15 +120,15 @@ Even if Power BI can be very useful with CSV files and make quickly some transfo
 
 #### Ingestion of CV's Data
 
-*ajouter l'image Architecture of POC - Ingestion CV data*  
+<img src="img/Architecture of POC - Ingestion CV_s Data.png" height="70">  
 
 #### Ingestion of tweets in the filed of Big Data
 
-*ajouter l'image Architecture of POC - Ingestion tweets*  
+<img src="img/Architecture of POC - Ingestion Tweets.png" height="70">  
 
 #### Ingestion of CSV
 
-*ajouter l'image Architecture of POC - Ingestion CSV*  
+<img src="img/Architecture of POC - Ingestion CSV Profile.png" height="70">  
 
 ### Implementation of Code (Technical projects)
 
@@ -140,7 +141,7 @@ It will be explained in each subfolder (with steps to implement it and a list of
 
 ### Description of the Use Case
 
-*ajouter l'image use case - Monitoring logs*
+<img src="img/Architecture of POC - Monitoring logs.png" height="70">  
 
 A company with very sensitive data - use case: A bank wants to monitor potential intrusions of its computer equipment.
 They want a dashboard to monitor logs of each computer of the company. A security engineer (like SOC) will have to monitore logs and find a way to analyze the behavior of potential threats.  
@@ -164,6 +165,7 @@ The other dataflow considered was Nifi but we have already tested it.
 ### Architecture of the project 
 
 *ajouter l'image Architecture of the POC - Monitoring logs*  
+<img src="img/aaaa.png" height="70">  
 
 ### Implementation of Code 
 

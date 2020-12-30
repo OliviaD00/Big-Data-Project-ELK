@@ -354,7 +354,7 @@ Speaking about keys, we take **more than 10 days** to obtain our twitter develop
 
 ## Use another method
 On the architecture illustration of the project, we want to display information of tweet's content in Slack. It is possible but we need to use another method for doing that. We need to use OpenDistro version of Elasticsearch (available with AWS image of Elasticsearch).
-All files (nifi configuration and docker-compose.yml) about this method are in /OpenDistroMethod.   
+All files (nifi configuration 'Opendistro nifi.xml') and docker-compose.yml) about this method are in /OpenDistroMethod.   
 
 In this case, Nifi configuration is a little different : 
 

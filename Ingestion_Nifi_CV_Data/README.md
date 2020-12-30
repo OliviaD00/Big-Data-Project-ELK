@@ -44,10 +44,6 @@ The configuration is in tweet_nifi.xml. Once loaded, you just need to put your o
 
 *photo config of component GetTwitter*  
 
-### Configure index on Elasticsearch via Kibana
-
-In order to correctly load data, we have to create an index in Elasticsearch.   
-We will create it with this following command :   
 
 ## Get started 
 

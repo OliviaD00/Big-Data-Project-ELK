@@ -103,7 +103,7 @@ In this case, one must check the path of the volume in the host machine to see i
 
 ## Others
 
-Some time our solution doesn't work well in the passage to Nifi to Elasticsearch. We don't know why, and in this case, we have to put manually parsed PDF into JSON document into Elasticsearch (via Dev Tools from Kibana)
+Some time our solution doesn't work well in the passage to Nifi to Elasticsearch. We don't know why, and in this case, we have to put manually parsed PDF into JSON document into Elasticsearch (via Dev Tools from Kibana) with the command `POST cv_parser/_doc/NOM_Prenom`
 
 # Ways to improve
 

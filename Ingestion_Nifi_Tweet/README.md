@@ -303,7 +303,6 @@ PUT /tweets
   "shards_acknowledged" : true,
   "index" : "tweets"
 }
-
 ```
 *ajouter une image de Kibana index tweets*  
 4. Then open nifi : http://localhost:8080/nifi/
@@ -335,7 +334,7 @@ PUT /tweets
 - Max VM is too low for launching Elasticsearch **solved**
 
 In this case, we need to run these two commands to give much space :  
- `wsl -d docker desktop`
+ `wsl -d docker desktop`  
  Then, `systclm -w vm.max_map_count=262144`
   
 ## Nifi and Twitter 
@@ -353,12 +352,45 @@ Speaking about keys, we take **more than 10 days** to obtain our twitter develop
 # Ways to improve
 
 ## Use another method
-On the architecture illustration of the project, we want to display information of tweet's content in Slack. It is possible but we need to use another method for doing that. We need to use 
-All files about this method are in : 
+On the architecture illustration of the project, we want to display information of tweet's content in Slack. It is possible but we need to use another method for doing that. We need to use OpenDistro version of Elasticsearch (available with AWS image of Elasticsearch).
+All files (nifi configuration and docker-compose.yml) about this method are in /OpenDistroMethod.   
 
 In this case, Nifi configuration is a little different : 
 
 *ajouter l'image other_config_twitter_nifi*
+
+In Kibana, in Devtools, the index will be also different : 
+
+```
+{
+  "properties": {
+    "created_at": {
+      "type": "date",
+      "format": "EEE MMM dd HH:mm:ss Z yyyy"
+    },
+    "retweeted_status.created_at": {
+      "type": "date",
+      "format": "EEE MMM dd HH:mm:ss Z yyyy"
+    },
+    "user.created_at": {
+      "type": "date",
+      "format": "EEE MMM dd HH:mm:ss Z yyyy"
+    },
+    "retweeted_status.user.created_at": {
+      "type": "date",
+      "format": "EEE MMM dd HH:mm:ss Z yyyy"
+    },
+    "coordinates.coordinates": {
+      "type": "geo_point"
+    },
+    "place.bounding_box": {
+      "type": "geo_shape",
+      "coerce": true,
+      "ignore_malformed": true
+    }
+  }
+}
+```
 
 But with this method, we get an error : "Unable to revice connection : https://localhost:9200/". We find on Internet that it will be linked to the certificates of even if we disable SSL. 
 

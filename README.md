@@ -64,19 +64,28 @@ Kafka is an open source distributed streaming platform, used since 2012. It uses
 
 Companies use cases: I want to load, extract, transform data with ingestion pipelines and make some dataflow with only one tool and then analyse, make some queries on a search engine platform.  
 
-*ajouter les images du drive sur le read.me for each category*
-
 #### Ingestion of CV's Data
 
-An IT Consulting firm wants to analyse quickly the CV's of the market in the IT field.
+An IT Consulting firm wants to analyse quickly the CV's of the market in the IT field. The problem is that there is a lot of choice in the market in different sources (indeed, monster, linkedIn)... Take a look at each CV will take a lot of time !   
+
+*ajouter l'image problematic - ingestion of CV's Data*    
+
+Our project will provide a quick way to see keywords on many CV's in one look. 
+
+*ajouter l'image use case - ingestion of CV's Data*  
+
 In this project, we will implement a POC to show how we can analyze CV from a directory of a computer, even if the directory has a lot CV's files (Volume Big Data Problem) with Dashboard.   
 
 #### Ingestion of tweets in the field of Big Data
+
+*ajouter l'image use case - ingestion Tweets*  
 
 An IT Consulting firm wants to make a technological watch in the field of Big Data by analyzing tweets about it.  
 In this project, we will implement a POC to show how we can analyze tweets (if Twitter authorize us). 
 
 #### Ingestion of CSV 
+
+*ajouter l'image use case - ingestion of CSV Profile*  
 
 A Marketing service of Company wants to analyze rapidly profile of their consumers and to store mail address on a search engine.   
 In this project, we will implement a POC to show how we can analyze data from a CSV file with a lot of lines (with only basic columns). 
@@ -108,13 +117,17 @@ Even if Power BI can be very useful with CSV files and make quickly some transfo
 
 ### Architecture of the project 
 
-*ajouter les images du drive sur le read.me for each category*
-
 #### Ingestion of CV's Data
+
+*ajouter l'image Architecture of POC - Ingestion CV data*  
 
 #### Ingestion of tweets in the filed of Big Data
 
+*ajouter l'image Architecture of POC - Ingestion tweets*  
+
 #### Ingestion of CSV
+
+*ajouter l'image Architecture of POC - Ingestion CSV*  
 
 ### Implementation of Code (Technical projects)
 
@@ -127,17 +140,15 @@ It will be explained in each subfolder (with steps to implement it and a list of
 
 ### Description of the Use Case
 
-*ajouter l'image sur le drive*
+*ajouter l'image use case - Monitoring logs*
 
 A company with very sensitive data - use case: A bank wants to monitor potential intrusions of its computer equipment.
-They want a dashboard to monitor logs of each computer of the company.
+They want a dashboard to monitor logs of each computer of the company. A security engineer (like SOC) will have to monitore logs and find a way to analyze the behavior of potential threats.  
 In this project, we will realize a POC which will show how we can monitor fictive logs of a computer with Dashboard and open source tools. 
 
 ### Technologies involved
 
 For this use case, we use :   
-
-*à remplacer si nécessaire*  
 
 - Log generation: Some script to create logs with Python
 - Load of data: Filebeat (beats) to collect logs and forwards them to a Kafka topic
@@ -152,7 +163,7 @@ The other dataflow considered was Nifi but we have already tested it.
 
 ### Architecture of the project 
 
-*ajouter l'image du drive sur le read.me*
+*ajouter l'image Architecture of the POC - Monitoring logs*  
 
 ### Implementation of Code 
 

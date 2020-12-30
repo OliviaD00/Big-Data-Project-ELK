@@ -13,7 +13,7 @@ Be aware of the RAM that you allocated to Docker, we put 8GO of RAM for images b
 
 ### Build an image of Nifi and the ELK suite
 
-For doing that, you can create a image of the ELK suite by run this command in the directory ./docker of the project : 
+For doing that, you can create a image of the ELK suite by run this command in the directory /docker of the project : 
 
 `docker build --tag myelastic .` 
 

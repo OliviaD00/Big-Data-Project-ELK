@@ -64,7 +64,7 @@ Kafka is an open source distributed streaming platform, used since 2012. It uses
 
 ### Description of the Use Case
 
-Companies use cases: I want to load, extract, transform data with ingestion pipelines and make some dataflow with only one tool and then analyse, make some queries on a search engine platform.  
+Most of company have such an use case for the use of ELK: I would like to load, extract, transform data with ingestion pipelines and make some dataflow with only one tool and then analyse, make some queries on a search engine platform.  
 
 #### Ingestion of CV's Data
 
@@ -76,25 +76,25 @@ Our project will provide a quick way to see keywords on many CV's in one look.
 
 <img src="img/use_case/ingestion cv data.png">  
 
-In this project, we will implement a POC to show how we can analyze CV from a directory of a computer, even if the directory has a lot CV's files (Volume Big Data Problem) with Dashboard.   
+In this project, we will implement a POC (Proof of Concept) to show how we can analyze CV from a directory of a computer, even if the directory has a lot CV's files (Volume Big Data Problem). To see our analyses we will use a Dashboard.   
 
 #### Ingestion of tweets in the field of Big Data
 
 <img src="img/use_case/ingestion tweets.png">  
 
 An IT Consulting firm wants to make a technological watch in the field of Big Data by analyzing tweets about it.  
-In this project, we will implement a POC to show how we can analyze tweets (if Twitter authorize us). 
+In this project, we will implement a POC to show how we can analyze tweets (we assume Twitter will authorize us). 
 
 #### Ingestion of CSV 
 
 <img src="img/use_case/ingestion csv data.png">   
 
-A Marketing service of Company wants to analyze rapidly profile of their consumers and to store mail address on a search engine.   
+A Marketing service of Company wants to analyze rapidly profile of their consumers and to store email addresses on a search engine.   
 In this project, we will implement a POC to show how we can analyze data from a CSV file with a lot of lines (with only basic columns). 
 
 ### Technologies involved
 
-For this 3 mini - Big Data - project, we use: 
+For this 3 mini - Big Data - projects, we use: 
 - Deployment: Docker to deploy the several open source software with a few commands. 
 - Distributed search engine platform: Elasticsearch to store data and allow to make some quick queries/quick search. 
 - Datavisualisation tool:  Kibana to analyze and visualize the data
@@ -104,20 +104,20 @@ Others technologies considered: Kakfa for the Dataflow system, Kubernetes for de
 
 1. **Why Nifi and not Kafka ?** 
 
-For the knowledge of the tool. Members of our group have already used Nifi in intership and no one has already Kafka. But we will test it with the other part of our project. 
+For the knowledge of the tool. Members of our group have already used Nifi during previous interships and no one has already been deeply through Kafka. Nonetheless, we will test Kafka with the other part of our project. 
 
 2. **Why Docker and not Kubernetes ?**
 
-The two are very useful to deploy projects and version of the software. But we didn't need clusters and orchestrations of containers like Kubernetes provide. Docker has furthermore lighter and faster deployment of containers, which is useful for a POC. 
+The two are very useful to deploy projects and version of the software. But we didn't need many clusters and a big orchestration of containers like Kubernetes provide. Docker has furthermore lighter and faster deployment of containers, which is useful for a POC. 
 
 3. **Why Kibana and Nifi and not Power BI ?** 
 
-Even if Power BI can be very useful with CSV files and make quickly some transformations of the data and very simple and powerful visualisation, we didn't choose it because : 
+Even if Power BI can be very useful with CSV files, it enables quick and simple transformations, and provides a large set of vizualisations, we didn't choose it because : 
 - Our project focuses on the open source distributed platform Elasticsearch which uses Kibana as Dataviz tool
 - Power BI can be limited with the analyse of tweets or maybe with PDF file (CV)
 - The free version is limited
 
-### Architecture of the project 
+### Architecture of the project /
 
 #### Ingestion of CV's Data
 

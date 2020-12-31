@@ -1,5 +1,5 @@
 # Big-Data-Project-ELK - Ingestion Tweets with Nifi
-Implementation of the ingestion and analyze of tweets using Nifi and the ELK suite together. We develop which part of the Architecture of the project, we success to test and which part we still have to focus on. But, our tests give a view of what can be done and help us to learn a lot about Nifi. 
+Implementation of the ingestion and analyze of tweets using Nifi and the ELK suite together. We develop a part of the Architecture of the project, we success to test and there is a part we still have to focus on. But, our tests give a view of what can be done and help us to learn a lot about Nifi. 
 
 # Steps to implement the project 
 
@@ -298,6 +298,7 @@ PUT /tweets
 *ajouter une image de localhost screen*  
 
 **3. Put an index in Kibana. For that, you have to go to http://localhost:5601/app/dev_tools#/console. In Dev Tools, you have to put a new Index named "tweets" (see Configuration > Configure index on Elasticsearch via Kibana).**    
+
 Submit it and look if you get this message in response :  
 ```
 {
@@ -306,6 +307,7 @@ Submit it and look if you get this message in response :
   "index" : "tweets"
 }
 ```
+
 *ajouter une image de Kibana index tweets*    
 
 **4. Then open nifi : http://localhost:8080/nifi/** 
@@ -397,13 +399,13 @@ In Kibana, in Devtools, the index will be also different :
 }
 ```
 
-But with this method, we get an error : "Unable to revice connection : https://localhost:9200/". We find on Internet that it will be linked to the certificates of even if we disable SSL. 
+But with this method, we get an error : "Unable to revice connection : https://localhost:9200/". We find on Internet that it will be linked to certificates, even if we disable SSL. 
 
 ## Check each Processor one by one of Nifi with a Processor Putfile
 
-In order, to check where exactly it goes wrong, we can check each processor output (if failure) in a file (Processor Putfile). 
+In order, to check where exactly it goes wrong in the Dataflow with Nifi, we can check each processor output (if failure) in a file (Processor Putfile). 
 
 ## To not use Docker
 
-We use Docker to facilate deployment and sharing but it causes a lot of troubles itself. Maybe, things would have been easier if we didn't use Docker. 
+We use Docker to facilitate deployment and sharing but it causes a lot of troubles itself. Maybe, things would have been easier if we didn't use Docker. 
 

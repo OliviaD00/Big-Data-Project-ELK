@@ -1,3 +1,4 @@
+
 # Big-Data-Project-ELK - Ingestion CV with Nifi
 Implementation of the ingestion and analyse of CV's (PDF files) using Nifi and the ELK suite together. 
 
@@ -68,11 +69,11 @@ To configure Nifi, you have to create 4 Processors of Nifi :
 
 We can imagine a version with only GetFile and PutElasticsearch.
 
-*CV nifi config (attention pas la version 2)*    
+<img src="img/cv nifi config.png">
 
 The configuration is in parserJson.xml in the repository /parser. Once loaded, you just need to put /input in the "input repository" parameter in the properties.   
 
-*ajouter l'image de Get File Config*    
+<img src="img/get file config.png">
 
 ## Get started 
 
@@ -80,7 +81,7 @@ The configuration is in parserJson.xml in the repository /parser. Once loaded, y
 
 **2. Verify if Elasticsearch is running by checking at http://localhost:9200/**  
 
-*ajouter une image de localhost screen*  
+<img src="img/localhost screen.png">
 
 **3. Use the parser to split CV (take a look at part Prepare the parser)**
   
@@ -90,23 +91,23 @@ The configuration is in parserJson.xml in the repository /parser. Once loaded, y
 
 - For doing that, first upload the template in nifi (after downloaded it in this github)  
 
-*ajouter l'image upload template nifi*  
+<img src="img/upload template nifi.png">
 
 - Then press on the button template, hold it and deposite it lower.
 
-*ajouter l'image add template nifi*
+<img src="img/add template nifi.png">
 
 - Then select the template that you want (in this case : tweet_nifi.xml) and click on the buttom add
 
-*ajouter l'image select template nifi*
+<img src="img/select template nifi.png">
 
 **6. Then you will have to configure the first processor named Get File by adding your specific input repository** 
 
-*ajouter l'image getFile config*  
+<img src="img/get file config.png">
 
 **7. Then you can start the Nifi pipeline by clicking on the button play.**  
 
-*ajouter l'image start the pipeline*  
+<img src="img/start the pipeline.png">
 
 **8. Then ! You can play with Kibana and Elasticsearch :) You might have to create an Index Partern on Kibana, once you loaded some JSON documents.** 
 
@@ -115,16 +116,16 @@ The configuration is in parserJson.xml in the repository /parser. Once loaded, y
 Here, you can see some screen about visualisations and Dashboard that we make with test CV. 
 
 ## Make powerful queries 
-
-*ajouter l'image quering data*    
-
-*ajouter l'image test 3*    
+ 
+<img src="img/quering data.png">
+  
+<img src="img/test 3.png">
 
 ## Make some dashboard 
 
-*ajouter l'image test 1*   
+<img src="img/test 1.png">
 
-*ajouter l'image test 2*   
+<img src="img/test 2.png">
 
 # Problems encountered
 
@@ -154,7 +155,7 @@ Some time our solution doesn't work well in the passage to Nifi to Elasticsearch
 We could try to execute directly a script with Nifi in order to parser data from PDF into JSON document. But it will take some time to define regular expressions and things like that. 
 For doing that, we try this configuration of Nifi (as a beginning) :   
 
-*ajouter l'image CV nifi config version 2* 
+<img src="img/cv nifi config version 2.png">
 
 ## Check each Processor one by one of Nifi with a Processor Putfile
 

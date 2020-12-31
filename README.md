@@ -143,7 +143,7 @@ It will be explained in each subfolder (with steps to implement it and a list of
 
 ### Description of the Use Case
 
-<img src="img/poc/monitoring logs.png">  
+<img src="img/use_case/monitoring logs.png">  
 
 A company with very sensitive data - use case: A bank wants to monitor potential intrusions of its computer equipment.
 They want a dashboard to monitor logs of each computer of the company. A security engineer (like SOC) will have to monitore logs and find a way to analyze the behavior of potential threats.  

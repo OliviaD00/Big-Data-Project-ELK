@@ -38,7 +38,7 @@ To configure Nifi, you have to create 4 Processors of Nifi :
 - PutElasticsearch (to put into Elasticsearch to the port 9300)
 - PutFile (to put failure in file)
 
-*ajouter l'image nifi_csv_config *    
+*ajouter l'image nifi_csv_config*    
 
 The configuration is in nifi_csv_config.xml. Once loaded, you just need to put /input in the "input repository" parameter in the properties.   
 

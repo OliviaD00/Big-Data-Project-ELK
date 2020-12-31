@@ -8,7 +8,7 @@ Implementation of the ingestion and analyze of tweets using Nifi and the ELK sui
 ### Install Docker
 
 To install Docker, you can follow this tutorial :  https://docs.docker.com/get-docker/    
-On Windows, you can use this one : https://docs.docker.com/docker-for-windows/install/
+On Windows, you can use this one : https://docs.docker.com/docker-for-windows/install/   
 Be aware of the RAM that you allocated to Docker, we put 8GO of RAM for images build in Docker. 
 
 ### Build an image of Nifi and the ELK suite

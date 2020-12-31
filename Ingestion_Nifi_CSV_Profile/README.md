@@ -1,3 +1,4 @@
+
 # Big-Data-Project-ELK - Ingestion CSV profile with Nifi
 Implementation of the ingestion and analyze of CSV using Nifi and the ELK suite together. 
 
@@ -37,12 +38,12 @@ To configure Nifi, you have to create 5 Processors of Nifi :
 - SplitJson (to convert JSON array into individual ones)
 - PutElasticsearch (to put into Elasticsearch to the port 9300)
 - PutFile (to put failure in file)
-
-*ajouter l'image nifi_csv_config*    
+   
+<img src="img/nifi_csv_config.png">
 
 The configuration is in nifi_csv_config.xml. Once loaded, you just need to put /input in the "input repository" parameter in the properties.   
-
-*ajouter l'image de Get File Config*    
+    
+<img src="img/get file config.png">
 
 ## Get started 
 
@@ -50,7 +51,7 @@ The configuration is in nifi_csv_config.xml. Once loaded, you just need to put /
 
 **2. Verify if Elasticsearch is running by checking at http://localhost:9200/**  
 
-*ajouter une image de localhost screen*  
+<img src="img/localhost screen.png">
   
 **3. Then open nifi : http://localhost:8080/nifi/**   
 
@@ -58,23 +59,23 @@ The configuration is in nifi_csv_config.xml. Once loaded, you just need to put /
 
 - For doing that, first upload the template in nifi (after downloaded it in this github)  
 
-*ajouter l'image upload template nifi*  
+<img src="img/upload template nifi.png">
 
 - Then press on the button template, hold it and deposite it lower.
 
-*ajouter l'image add template nifi*
+<img src="img/add template nifi.png">
 
 - Then select the template that you want (in this case : tweet_nifi.xml) and click on the buttom add
 
-*ajouter l'image select template nifi*
+<img src="img/select template nifi.png">
 
 **6. Then you will have to configure the first processor named Get File by adding your specific input repository** 
 
-*ajouter l'image getFile config*  
+<img src="img/get file config.png">
 
 **7. Then you can start the Nifi pipeline by clicking on the button play.**  
 
-*ajouter l'image start the pipeline*  
+<img src="img/start the pipeline.png">
 
 **8. Then ! You can play with Kibana and Elasticsearch :) You will certainly must to create an index pattern on Kibana after sending a few JSON documents**
 

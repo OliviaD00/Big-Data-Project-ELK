@@ -21,7 +21,7 @@ Implementation of the monitoring of logs using Kafka and the ELK suite together.
 - Connect ELK to Kafka
 
 # Ways to improve
--More complex log generation
+- More complex log generation
 
 # Sources
 - [https://towardsdatascience.com/kafka-python-explained-in-10-lines-of-code-800e3e07dad1](https://towardsdatascience.com/kafka-python-explained-in-10-lines-of-code-800e3e07dad1)

@@ -58,7 +58,6 @@ services:
       ELASTICSEARCH_HOSTS: https://odfe-node1:9200
     networks:
       - odfe-net
-
   nifi:
     image: apache/nifi:latest
     ports:
@@ -69,14 +68,10 @@ services:
     volumes:
       - ./nifi-data:/opt/nifi-data/
       - ./python:/opt/nifi-python
-    extra_hosts:
-      - "elasticsearch:odfe-node1"
     networks:
       - odfe-net
-
 volumes:
   odfe-data1:
   odfe-data2:
-
 networks:
   odfe-net:

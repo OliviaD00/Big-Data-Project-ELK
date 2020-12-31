@@ -25,13 +25,13 @@ You just created a docker image of the ELK suite according of the configuration 
 Then you can run to launch Nifi in another CMD (terminal) :  
 `docker run -p 8080:8080 -v <path localisation of CSV's file>:/input -ti apache/nifi`    
 
-It runs a container of the image that you created (ELK suite) and a container of the Apache Nifi official image. If Elasticsearch doesn't launch, it tries again for 30 times according to the run command. 
+It runs a container of the image that you created (ELK suite) and a container of the Apache Nifi official image. If Elasticsearch doesn't launch, it tries again for 30 times according to the running command of myelastic. 
 
 ## Configuration
 
 ### Configure Nifi
 
-To configure Nifi, you have to create 4 Processors of Nifi :   
+To configure Nifi, you have to create 5 Processors of Nifi :   
 - GetFile (to get CSV) 
 - ExecuteScript (to execute a ruby script to convert CSV into JSON array)
 - SplitJson (to convert JSON array into individual ones)
@@ -100,4 +100,4 @@ Some time our solution doesn't work well in the passage to Nifi to Elasticsearch
 
 ## To not use Docker
 
-We use Docker to facilate deployment and sharing but it causes a lot of troubles itself. Maybe, things would have been easier if we didn't use Docker. 
+We use Docker to facilitate deployment and sharing but it causes a lot of troubles itself. Maybe, things would have been easier if we didn't use Docker. 

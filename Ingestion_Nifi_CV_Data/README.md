@@ -15,44 +15,78 @@ Be aware of the RAM that you allocated to Docker, we put 8GO of RAM for images b
 
 For doing that, you can create a image of the ELK suite by run this command in the directory /docker of the project : 
 
-`docker build --tag myelastic .` 
+`docker build --tag myelastic .`   
+
+To run the container :  
+`docker run -p 9200:9200 -p 9300:9300 -p 5601:5601 -e LOGSTASH=0 -ti -e ES_CONNNECT_RETRY=300 myelastic`
 
 You just created a docker image of the ELK suite according of the configuration of the Dockerfile in this repository.   
 
-Then you can run this command :  
-`docker-compose up`    
+Then you can run to launch Nifi in another CMD (terminal) :  
+`docker run -p 8080:8080 -v <path localisation of CV's file>:/input -ti apache/nifi`    
 
 It runs a container of the image that you created (ELK suite) and a container of the Apache Nifi official image. If Elasticsearch doesn't launch, it tries again for 30 times according of the configuration of the docker-compose.yml in this repository. 
 
 ### Prepare the parser 
- 
+
+The parser will help to split the CV into several attributes looking for regular expressions. We use one which was already developed https://github.com/antonydeepak/ResumeParser.git .    
+
+#### Build the image with Dockerfile
+
+On the repository parser, you have to build the image with the following command :
+`docker build --tag parser .`
+
+To run the container : 
+`docker run -v <path localisation of CV's file>:/input -ti parser`
+
+#### Modify the key words
+The key words can be modify in the file « gazetteer » in the repository : ResumeParser/GATEFiles/plugins/ANNIE/resources/gazetteer/   
+
+#### Use the parser
+On the repository ResumeParser/ResumeTrasducer, you have to do : 
+
+**1. Have a file of format PDF to parse**  
+
+**2. Run the command :** 
+
+```
+> java -cp '.\bin\*;..\GATEFiles\lib\*;..\GATEFILES\bin\gate.jar;.\lib\*' code4goal.antony.resumeparser.ResumeParserProgram <input_file> [output_file]
+```
+
+**3. Take back the JSON created and put it in the path localisation of the host given to Nifi** 
 
 ## Configuration
 
 ### Configure Nifi
 
-To configure Nifi, you have to create 5 Processors of Nifi :   
-- GetTwitter (to collecte tweets with identifiants),   
-- EvaluateJsonPath (used to check if there is a text field present in tweets, if not it will not passed it), 
-- RouteOnAttribute (check if the text field is empty or not : if it is empty it will not passed it),   
-- JoltTransformJson (execute a script to make a first map of the data),   
-- PutElasticsearchHttp (indexs data in Elasticsearch using the previous map).  
+To configure Nifi, you have to create 4 Processors of Nifi :   
+- GetFile (to get CV) 
+- EvaluateJsonPath (to try to check if there is JSON)
+- Attributes to JSON (to try to associate field to attribute)
+- PutElasticsearch (to put into Elasticsearch to the port 9300)
 
-*photo pb Twitter flow*  
+We can imagine a version with only GetFile and PutElasticsearch.
 
-The configuration is in tweet_nifi.xml. Once loaded, you just need to put your own twitter developers account identifiant (key consumers and token keys) in Properties of the Component GetTwitter "Ingest Tweets from Public Feed".     
+*CV nifi config*    
 
-*photo config of component GetTwitter*  
+The configuration is in parserJson.xml in the repository /parser. Once loaded, you just need to put input in the "input repository" parameter in the properties.   
+
+*ajouter l'image de Get File Config*    
 
 ## Get started 
 
-**1. Make sure that Docker is running and runs two containers : once for the Apache Nifi image and once for ELK suite. If it is not : go back to Installation > Build an image of Nifi and the ELK suite.**
-**2. Verify if Elasticsearch is running by checking at http://localhost:9200/  **
+**1. Make sure that Docker is running and runs three containers : once for the Apache Nifi image, once for the parser and once for ELK suite. If it is not : go back to Installation > Build an image of Nifi and the ELK suite, then prepare the parser**  
+
+**2. Verify if Elasticsearch is running by checking at http://localhost:9200/**  
 
 *ajouter une image de localhost screen*  
+
+**3. Use the parser to split CV (take a look at part Prepare the parser)
   
-**4. Then open nifi : http://localhost:8080/nifi/**  
-**5. Load the template parser.json.xml in this subfolder.**    
+**4. Then open nifi : http://localhost:8080/nifi/**   
+
+**5. Load the template parserJson.xml in this subfolder.**    
+
 - For doing that, first upload the template in nifi (after downloaded it in this github)  
 
 *ajouter l'image upload template nifi*  
@@ -65,13 +99,15 @@ The configuration is in tweet_nifi.xml. Once loaded, you just need to put your o
 
 *ajouter l'image select template nifi*
 
-**6. Then you will have to configure the first processor named Get File (GetTwitter Processor) by adding your specific input repository 
+**6. Then you will have to configure the first processor named Get File by adding your specific input repository 
 
 *ajouter l'image getFile config*  
 
 **7. Then you can start the Nifi pipeline by clicking on the button play.**  
 
 *ajouter l'image start the pipeline*  
+
+**8. Then ! You can play with Kibana and Elasticsearch :)
 
 # Some results
 

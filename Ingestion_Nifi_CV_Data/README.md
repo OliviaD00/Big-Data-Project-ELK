@@ -8,12 +8,12 @@ Implementation of the ingestion and analyse of CV's (PDF files) using Nifi and t
 ### Install Docker
 
 To install Docker, you can follow this tutorial :  https://docs.docker.com/get-docker/    
-On Windows, you can use this one : https://docs.docker.com/docker-for-windows/install/
+On Windows, you can use this one : https://docs.docker.com/docker-for-windows/install/   
 Be aware of the RAM that you allocated to Docker, we put 8GO of RAM for images build in Docker. 
 
 ### Build an image of Nifi and the ELK suite
 
-For doing that, you can create a image of the ELK suite by run this command in the directory /docker of the project : 
+For doing that, you can create a image of the ELK suite by run this command in the directory where the Dockerfile is located : 
 
 `docker build --tag myelastic .`   
 
@@ -25,15 +25,15 @@ You just created a docker image of the ELK suite according of the configuration 
 Then you can run to launch Nifi in another CMD (terminal) :  
 `docker run -p 8080:8080 -v <path localisation of CV's file>:/input -ti apache/nifi`    
 
-It runs a container of the image that you created (ELK suite) and a container of the Apache Nifi official image. If Elasticsearch doesn't launch, it tries again for 30 times according of the configuration of the docker-compose.yml in this repository. 
+It runs a container of the image that you created (ELK suite) and a container of the Apache Nifi official image. If Elasticsearch doesn't launch, it tries again for 30 times according of the running command of myelastic.
 
 ### Prepare the parser 
 
-The parser will help to split the CV into several attributes looking for regular expressions. We use one which was already developed https://github.com/antonydeepak/ResumeParser.git .    
+The parser will help to split the CV into several attributes looking for regular expressions (like experiences, skills, education...). We use one which was already developed : https://github.com/antonydeepak/ResumeParser.git .    
 
 #### Build the image with Dockerfile
 
-On the repository parser, you have to build the image with the following command :
+On the repository /parser, you have to build the image with the following command :
 `docker build --tag parser .`
 
 To run the container : 
@@ -41,9 +41,10 @@ To run the container :
 
 #### Modify the key words
 The key words can be modify in the file « gazetteer » in the repository : ResumeParser/GATEFiles/plugins/ANNIE/resources/gazetteer/   
+You can modify it with notepad or nano.    
 
 #### Use the parser
-On the repository ResumeParser/ResumeTrasducer, you have to do : 
+On the repository ResumeParser/ResumeTrasducer, you have to : 
 
 **1. Have a file of format PDF to parse**  
 
@@ -67,9 +68,9 @@ To configure Nifi, you have to create 4 Processors of Nifi :
 
 We can imagine a version with only GetFile and PutElasticsearch.
 
-*CV nifi config*    
+*CV nifi config (attention pas la version 2)*    
 
-The configuration is in parserJson.xml in the repository /parser. Once loaded, you just need to put input in the "input repository" parameter in the properties.   
+The configuration is in parserJson.xml in the repository /parser. Once loaded, you just need to put /input in the "input repository" parameter in the properties.   
 
 *ajouter l'image de Get File Config*    
 
@@ -107,11 +108,11 @@ The configuration is in parserJson.xml in the repository /parser. Once loaded, y
 
 *ajouter l'image start the pipeline*  
 
-**8. Then ! You can play with Kibana and Elasticsearch :)
+**8. Then ! You can play with Kibana and Elasticsearch :) You might have to create an Index Partern on Kibana, once you loaded some JSON documents. 
 
 # Some results
 
-Here, we can see some screen about visualisations and Dashboard that we make with test CV. 
+Here, you can see some screen about visualisations and Dashboard that we make with test CV. 
 
 ## Make powerful queries 
 
@@ -157,9 +158,9 @@ For doing that, we try this configuration of Nifi (as a beginning) :
 
 ## Check each Processor one by one of Nifi with a Processor Putfile
 
-In order, to check where exactly it goes wrong, we can check each processor output (if failure) in a file (Processor Putfile). 
+In order, to check where exactly it goes wrong in the Dataflow with Nifi, we can check each processor output (if failure) in a file (Processor Putfile). 
 
 ## To not use Docker
 
-We use Docker to facilate deployment and sharing but it causes a lot of troubles itself. Maybe, things would have been easier if we didn't use Docker. 
+We use Docker to facilitate deployment and sharing but it causes a lot of troubles itself. Maybe, things would have been easier if we didn't use Docker. 
 

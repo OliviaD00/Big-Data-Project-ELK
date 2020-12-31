@@ -26,3 +26,5 @@ Implementation of the monitoring of logs using Kafka and the ELK suite together.
 # Sources
 - [https://towardsdatascience.com/kafka-python-explained-in-10-lines-of-code-800e3e07dad1](https://towardsdatascience.com/kafka-python-explained-in-10-lines-of-code-800e3e07dad1)
 - [https://www.elastic.co/fr/blog/just-enough-kafka-for-the-elastic-stack-part1](https://www.elastic.co/fr/blog/just-enough-kafka-for-the-elastic-stack-part1)
+- [Zookeeper Website](https://zookeeper.apache.org/releases.html#download)
+- [Kafka Website](http://kafka.apache.org/downloads)

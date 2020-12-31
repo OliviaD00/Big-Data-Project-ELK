@@ -1,3 +1,4 @@
+
 # Big-Data-Project-ELK - Ingestion Tweets with Nifi
 Implementation of the ingestion and analyze of tweets using Nifi and the ELK suite together. We develop a part of the Architecture of the project, we success to test and there is a part we still have to focus on. But, our tests give a view of what can be done and help us to learn a lot about Nifi. 
 
@@ -40,11 +41,11 @@ To configure Nifi, you have to create 5 Processors of Nifi :
 - JoltTransformJson (execute a script to make a first map of the data),   
 - PutElasticsearchHttp (indexs data in Elasticsearch using the previous map).  
 
-*photo pb Twitter flow*  
+<img src="img/pb twitter flow.png"> 
 
 The configuration is in tweet_nifi.xml. Once loaded, you just need to put your own twitter developers account identifiant (key consumers and token keys) in Properties of the Component GetTwitter "Ingest Tweets from Public Feed".     
 
-*photo config of component GetTwitter*  
+<img src="img/gettwitter config.png"> 
 
 ### Configure index on Elasticsearch via Kibana
 
@@ -59,7 +60,7 @@ PUT /tweets
         "properties" : {
           "created_at" : {
             "type" : "date",
-			"format": "E MMM dd HH:mm:ss z yyyy||E MMM dd HH:mm:ss Z yyyy",
+      "format": "E MMM dd HH:mm:ss z yyyy||E MMM dd HH:mm:ss Z yyyy",
             "fields" : {
               "keyword" : {
                 "type" : "keyword",
@@ -222,7 +223,7 @@ PUT /tweets
           },
           "user_created_at" : {
             "type" : "date",
-			"format" : "E MMM dd HH:mm:ss z yyyy||E MMM dd HH:mm:ss Z yyyy"
+      "format" : "E MMM dd HH:mm:ss z yyyy||E MMM dd HH:mm:ss Z yyyy"
             "fields" : {
               "keyword" : {
                 "type" : "keyword",
@@ -295,7 +296,7 @@ PUT /tweets
 
 **2. Verify if Elasticsearch is running by checking at http://localhost:9200/**
 
-*ajouter une image de localhost screen*  
+<img src="img/localhost screen.png">
 
 **3. Put an index in Kibana. For that, you have to go to http://localhost:5601/app/dev_tools#/console. In Dev Tools, you have to put a new Index named "tweets" (see Configuration > Configure index on Elasticsearch via Kibana).**    
 
@@ -307,8 +308,8 @@ Submit it and look if you get this message in response :
   "index" : "tweets"
 }
 ```
-
-*ajouter une image de Kibana index tweets*    
+ 
+<img src="img/kibana index tweets.png">
 
 **4. Then open nifi : http://localhost:8080/nifi/** 
 
@@ -316,23 +317,23 @@ Submit it and look if you get this message in response :
 
 - For doing that, first upload the template in nifi (after downloaded it in this github)  
 
-*ajouter l'image upload template nifi*  
+<img src="img/upload template nifi.png">
 
 - Then press on the button template, hold it and deposite it lower.
 
-*ajouter l'image add template nifi*
+<img src="img/add template nifi.png">
 
 - Then select the template that you want (in this case : tweet_nifi.xml) and click on the buttom add
 
-*ajouter l'image select template nifi*
+<img src="img/select template nifi.png">
 
 **6. Then you will have to configure the first processor named Ingest Tweets from Public Feed (GetTwitter Processor) by adding our Consumer Key & Secret and Token Access Key & Secret that you can find on your application in your Twitter Developer Account.** 
 
-*ajouter l'image gettwitter config*  
+<img src="img/gettwitter config.png">
 
 **7. Then you can start the Nifi pipeline by clicking on the button play.**  
-
-*ajouter l'image start the pipeline*  
+ 
+<img src="img/start the pipeline.png">
 
 # Problems encountered
 
@@ -350,7 +351,7 @@ In this case, we need to run these two commands to give much space :
 
 In this case, we say blocked to the processor of Nifi that says "if there is no text in the tweets (= empty) don't forward it". So, it might be the keys of twitter account authentification (maybe they were not totally actives when we make the tests) that have a little problem.
 
-*photo pb Twitter flow (encore une fois)*
+<img src="img/pb twitter flow.png">
 
 - Time to have access
 
@@ -364,7 +365,7 @@ All files (nifi configuration 'Opendistro nifi.xml') and docker-compose.yml) abo
 
 In this case, Nifi configuration is a little different : 
 
-*ajouter l'image other_config_twitter_nifi*
+<img src="img/other_config_twitter_nifi.png">
 
 In Kibana, in Devtools, the index will be also different : 
 

@@ -8,12 +8,12 @@ Implementation of the ingestion and analyze of CSV using Nifi and the ELK suite 
 ### Install Docker
 
 To install Docker, you can follow this tutorial :  https://docs.docker.com/get-docker/    
-On Windows, you can use this one : https://docs.docker.com/docker-for-windows/install/
+On Windows, you can use this one : https://docs.docker.com/docker-for-windows/install/    
 Be aware of the RAM that you allocated to Docker, we put 8GO of RAM for images build in Docker. 
 
 ### Build an image of Nifi and the ELK suite
 
-For doing that, you can create a image of the ELK suite by run this command in the directory /docker of the project : 
+For doing that, you can create a image of the ELK suite by run this command in the directory where the Dockerfile is : 
 
 `docker build --tag myelastic .`   
 
@@ -23,9 +23,9 @@ To run the container :
 You just created a docker image of the ELK suite according of the configuration of the Dockerfile in this repository.   
 
 Then you can run to launch Nifi in another CMD (terminal) :  
-`docker run -p 8080:8080 -v <path localisation of CV's file>:/input -ti apache/nifi`    
+`docker run -p 8080:8080 -v <path localisation of CSV's file>:/input -ti apache/nifi`    
 
-It runs a container of the image that you created (ELK suite) and a container of the Apache Nifi official image. If Elasticsearch doesn't launch, it tries again for 30 times according of the configuration of the docker-compose.yml in this repository. 
+It runs a container of the image that you created (ELK suite) and a container of the Apache Nifi official image. If Elasticsearch doesn't launch, it tries again for 30 times according to the run command. 
 
 ## Configuration
 
@@ -40,13 +40,13 @@ To configure Nifi, you have to create 4 Processors of Nifi :
 
 *ajouter l'image nifi_csv_config *    
 
-The configuration is in nifi_csv_config.xml. Once loaded, you just need to put input in the "input repository" parameter in the properties.   
+The configuration is in nifi_csv_config.xml. Once loaded, you just need to put /input in the "input repository" parameter in the properties.   
 
 *ajouter l'image de Get File Config*    
 
 ## Get started 
 
-**1. Make sure that Docker is running and runs three containers : once for the Apache Nifi image, once for the parser and once for ELK suite. If it is not : go back to Installation > Build an image of Nifi and the ELK suite, then prepare the parser**  
+**1. Make sure that Docker is running and runs two containers : once for the Apache Nifi image and once for ELK suite. If it is not : go back to Installation > Build an image of Nifi and the ELK suite**  
 
 **2. Verify if Elasticsearch is running by checking at http://localhost:9200/**  
 
@@ -68,7 +68,7 @@ The configuration is in nifi_csv_config.xml. Once loaded, you just need to put i
 
 *ajouter l'image select template nifi*
 
-**6. Then you will have to configure the first processor named Get File by adding your specific input repository 
+**6. Then you will have to configure the first processor named Get File by adding your specific input repository** 
 
 *ajouter l'image getFile config*  
 
@@ -76,7 +76,7 @@ The configuration is in nifi_csv_config.xml. Once loaded, you just need to put i
 
 *ajouter l'image start the pipeline*  
 
-**8. Then ! You can play with Kibana and Elasticsearch :) You will certainly must to create an index pattern on Kibana after sending a few JSON documents
+**8. Then ! You can play with Kibana and Elasticsearch :) You will certainly must to create an index pattern on Kibana after sending a few JSON documents**
 
 
 # Problems encountered

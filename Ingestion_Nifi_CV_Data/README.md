@@ -41,7 +41,7 @@ To run the container :
 
 #### Modify the key words
 The key words can be modify in the file « gazetteer » in the repository : ResumeParser/GATEFiles/plugins/ANNIE/resources/gazetteer/   
-You can modify it with notepad or nano.    
+You can modify it with `notepad` or `nano`.    
 
 #### Use the parser
 On the repository ResumeParser/ResumeTrasducer, you have to : 
@@ -82,7 +82,7 @@ The configuration is in parserJson.xml in the repository /parser. Once loaded, y
 
 *ajouter une image de localhost screen*  
 
-**3. Use the parser to split CV (take a look at part Prepare the parser)
+**3. Use the parser to split CV (take a look at part Prepare the parser)**
   
 **4. Then open nifi : http://localhost:8080/nifi/**   
 
@@ -100,7 +100,7 @@ The configuration is in parserJson.xml in the repository /parser. Once loaded, y
 
 *ajouter l'image select template nifi*
 
-**6. Then you will have to configure the first processor named Get File by adding your specific input repository 
+**6. Then you will have to configure the first processor named Get File by adding your specific input repository** 
 
 *ajouter l'image getFile config*  
 
@@ -108,7 +108,7 @@ The configuration is in parserJson.xml in the repository /parser. Once loaded, y
 
 *ajouter l'image start the pipeline*  
 
-**8. Then ! You can play with Kibana and Elasticsearch :) You might have to create an Index Partern on Kibana, once you loaded some JSON documents. 
+**8. Then ! You can play with Kibana and Elasticsearch :) You might have to create an Index Partern on Kibana, once you loaded some JSON documents.** 
 
 # Some results
 

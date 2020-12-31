@@ -56,11 +56,9 @@ Docker is an open source software, since 2013, that gives the possibility to lau
 
 <img src="img/logos/kafka.png" height="70">
 
-*à développer en fonction de vos recherches*    
+Kafka is an open source distributed streaming platform, used since 2012. It uses messaging agents and it is written in Scala. Kafka can be used as a messaging, streaming, dataflow of data systems in real time. Kafka uses a binary TCP-based protocol that is optimized for efficiency and relies on a "message set" abstraction that naturally groups messages together to reduce the overhead of the network roundtrip. Thanks to this optimization, the project aims and succeeds to provide a unified, real-time, low-latency system for handeling data streams. 
 
-Kafka is an open source distributed streaming platform, used since 2012. It uses messaging agents and it is written in Scala. Kafka can be used as a messaging, streaming, dataflow of data systems in real time. 
-
-# Uses cases
+# Use cases
 
 ## Ingestion of data in ElasticSearch with Nifi
 

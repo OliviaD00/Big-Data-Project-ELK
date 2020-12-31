@@ -159,7 +159,7 @@ For this use case, we use :
 - Distributed open source platform: Elasticsearch to index the data into JSON documents
 - Datavisualisation tool: Kibana to analyze and visualise the data
 
-We use Python, the ELK suite because we know quite a bit the technologies (others class).   
+We use Python and the ELK suite because we already had a bit of knowledges about these technologies (thanks to other class).   
 We use Kafka as a dataflow system because it is often used to queue data and it is very well documented (more than Nifi, we think).    
 The other dataflow considered was Nifi but we have already tested it.
 

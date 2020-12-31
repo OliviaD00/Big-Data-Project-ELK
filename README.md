@@ -3,7 +3,8 @@
 
 
 # Big-Data-Project-ELK
-This a Project for the ING5 Class of Big Data at ECE Paris;  
+This a Project for the ING5 Class of Big Data at ECE Paris, 
+
 Members of the group : 
 - Alexis DIREZ
 - Neil SEGARD
@@ -16,13 +17,13 @@ We test several uses cases and technologies with Elasticsearch.
 The goal was to implement Elasticsearch with two others Open Source distributed systems: Nifi (Dataflow system) and Kafka.
 We present our technical results in the several subfolders of this project. But the architecture/design is presented here in this readme.
 
-# All technologies involved in our project and its uses cases
+# All technologies involved in our project and their use cases
 
 ## Elasticsearch
 
 <img src="img/logos/elasticsearch.png" height="70">
 
-Elasticsearch is a distributed, open source search and analytics engine for all types of data. It provides a distributed, multitenant-capable full-text search engine, it uses JSON documents to store Data. It allows some powerful queries with a system of scoring and a lot of possibilities of aggregation. It is developed in Java. It is often used with the ELK suite (Elasticsearch - Logstash - Kibana), allowed this distributed open source engine to complete extract-load-transform actions, aggregations and storage of documents and at the end monitoring and data visualization: a complete and flexible tool! 
+Elasticsearch is a distributed, open source search and analytics engine for all types of data. It provides a distributed, multitenant-capable full-text search engine, it uses JSON documents to store Data. It allows some powerful queries with a system of scoring and a lot of possibilities of aggregation. It is developed in Java. It is often used with the ELK suite (Elasticsearch - Logstash - Kibana), allowed this distributed open source engine to complete ELT (extract-load-transform) actions, aggregations and storage of documents and at the end monitoring and data visualization: a complete and flexible tool! 
 
 ## Kibana
 
@@ -41,15 +42,15 @@ Logstash can be assimilated as the ETL of the ELK suite. It collects, transforms
  
 <img src="img/logos/nifi.png" height="70">
 
-Apache NiFi is a software project used to automate the flow of data between software systems (Dataflow system). It can also be used as an ETL Extract, transform and load data. It was developed by the NSA then open-sourced.   
-Nifi uses template, processors to describe relations between software systems. It offers some specific features which can help to provide security using TLS encryption, the ability to operate within clusters...   
-Nifi, as a Dataflow system, can schedule the flow of data between software systems using classic schedule methods : round robin, FIFO, LIFO...
+Apache NiFi is a software project used to automate the flow of data between software systems (Dataflow system). It can also be used as an ETL Extract, transform and load data. It was developed by the NSA (National Security Agency)and then it became open-source.   
+Nifi uses templates, processors to describe relations between software systems. It offers some specific features which can help to provide security using TLS encryption, the ability to operate within clusters...   
+Nifi, as a Dataflow system, can schedule the flow of data between software systems using classic schedule methods : round robin, FIFO (First In First Out), LIFO (Last In First Out), ...
 
 ## Docker
 
 <img src="img/logos/docker.png" height="70">
 
-Docker is an open source software, since 2013, that gives the possibility to launch applications and software using images and containers. Images are version of applications and softwares. One can find a lot of existing images in the Docker Hub (open library of container images from applications, software and open source projects). When you launch an image, you create a container. Each container uses an operating system and has a part of memory allowed. Docker has specific features which can let containers use volume on the host machine, and others features useful (improving security...). Docker is used to deploy software rapidly. 
+Docker is an open source software, since 2013, that gives the possibility to launch applications and software using images and containers. Images are version of applications and softwares. One can find a lot of existing images in the Docker Hub (open library of container images from applications, software and open source projects). When you launch an image, you create a container. Each container uses an operating system and has a part of memory allowed. Docker has specific features which can let containers use volume on the host machine, and others features useful (improving security...). Docker is used to deploy software rapidly and is less ressources consuming than a Virtual Machine (VM). 
 
 ## Kafka 
 

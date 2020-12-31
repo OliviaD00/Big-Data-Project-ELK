@@ -1,5 +1,6 @@
 
 
+
 # Big-Data-Project-ELK - Monitoring Log Kafka 
 Implementation of the monitoring of logs using Kafka and the ELK suite together. 
 
@@ -12,6 +13,7 @@ Implementation of the monitoring of logs using Kafka and the ELK suite together.
 <img src="img/logs_in_consumer.png">
 
 # Problems encountered
+- Connect kafka and ELK
 
 # Ways to improve
-
+-More complex log generation
